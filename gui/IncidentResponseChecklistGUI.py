@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from gui.GuiUtils import *
+from utils.WordDocCreator import WordDocCreator
 import json
 
 class IrcApp:
@@ -48,6 +49,11 @@ class IrcApp:
 
                         case _:
                             print(f'Invalid widget type received: {widget}')
+
+
+
+        button = ctk.CTkButton(self.checklist_frame, text="Output", command=lambda: print_current_results(self.checklist_frame))
+        button.pack(side=ctk.BOTTOM, padx=5, pady=5)
 
 
 

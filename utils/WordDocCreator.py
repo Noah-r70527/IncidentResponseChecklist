@@ -1,0 +1,49 @@
+import docx.styles.styles
+from docx import Document
+from docx.shared import Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+
+
+class WordDocCreator:
+
+    def __init__(self, document_name: str):
+        self.document = Document()
+        self.document_name = document_name
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.document.save(self.document_name)
+
+
+    def write_output(self, document_contents: list[dict[str, str]]) -> None:
+        # Create table with a single header row
+        table = self.document.add_table(rows=1, cols=2)
+        table.style = "Table Grid"
+
+        header_texts = ("Step Description", "Step Results")
+        hdr_cells = table.rows[0].cells
+        for i, text in enumerate(header_texts):
+            p = hdr_cells[i].paragraphs[0]
+            p.clear()
+            run = p.add_run(text)
+            run.font.bold = True
+            run.font.underline = True
+
+        for item in document_contents:
+            for key, value in item.items():
+                if not key and value:
+                    continue
+
+                row_cells = table.add_row().cells
+
+                p_left = row_cells[0].paragraphs[0]
+                p_left.clear()
+                run_left = p_left.add_run(key or "")
+                run_left.font.bold = True
+                p_right = row_cells[1].paragraphs[0]
+                p_right.clear()
+                p_right.add_run(value or "")
+

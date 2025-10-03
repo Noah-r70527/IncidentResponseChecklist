@@ -11,5 +11,10 @@
     "LabelText": "This is a test2",
     "ContentWidget": "Dropdown",
     "Selections": ["test1", "test2", "test3"]
+  },
+  {
+    "LabelText": "This is a test3",
+    "ContentWidget": "Dropdown",
+    "Selections": ["test1", "test2", "test3"]
   }
 ]

@@ -1,5 +1,6 @@
 from typing import Callable
 import customtkinter as ctk
+from utils.WordDocCreator import WordDocCreator
 
 def create_label(parent_widget: ctk.CTkFrame, label_text: str) -> ctk.CTkLabel:
     label = ctk.CTkLabel(parent_widget, text=label_text)
@@ -11,7 +12,7 @@ def create_button(parent_widget: ctk.CTkFrame, button_text: str, button_command_
     return button
 
 
-def create_checkbox(parent_widget: ctk.CTkFrame, on_value: int = 1, off_value: int = 1) -> ctk.CTkCheckBox:
+def create_checkbox(parent_widget: ctk.CTkFrame, on_value: int = "Done", off_value: int = "Not Done") -> ctk.CTkCheckBox:
     check_box = ctk.CTkCheckBox(parent_widget, onvalue=on_value, offvalue=off_value, text="")
     return check_box
 
@@ -29,3 +30,43 @@ def create_entry(parent_widget: ctk.CTkFrame) -> ctk.CTkEntry:
 def create_frame(parent_widget: ctk.CTkFrame) -> ctk.CTkFrame:
     frame = ctk.CTkFrame(parent_widget)
     return frame
+
+
+def print_current_results(widget_in):
+    output = []
+    widgets = widget_in.winfo_children()
+    for widget in widgets:
+        if isinstance(widget, ctk.CTkFrame):
+            label = widget.winfo_children()[0]
+            content_label = widget.winfo_children()[1]
+
+            match type(content_label):
+
+                case ctk.CTkCheckBox:
+                    check: ctk.CTkCheckBox = content_label
+                    output.append(
+                        {
+                            label.cget("text"): "Done" if check.get() == 1 else "Not Done"
+                        }
+                    )
+
+                case ctk.CTkComboBox:
+                    dropbox: ctk.CTkComboBox = content_label
+                    output.append(
+                        {
+                            label.cget("text"): dropbox.get()
+                        }
+                    )
+
+                case ctk.CTkEntry:
+                    entry: ctk.CTkEntry = content_label
+                    output.append(
+                        {
+                            label.cget("text"): entry.get()
+                        }
+                    )
+                case _:
+                    print(f'Neither')
+
+    with WordDocCreator("Output.docx") as document:
+        document.write_output(output)
