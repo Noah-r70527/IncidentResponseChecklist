@@ -1,0 +1,15 @@
+[
+  {
+    "LabelText": "This is a test",
+    "ContentWidget": "Checkbox"
+  },
+  {
+    "LabelText": "This is a test2",
+    "ContentWidget": "Entry"
+  },
+  {
+    "LabelText": "This is a test2",
+    "ContentWidget": "Dropdown",
+    "Selections": ["test1", "test2", "test3"]
+  }
+]

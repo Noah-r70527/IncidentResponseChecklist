@@ -4,8 +4,8 @@ from gui.IncidentResponseChecklistGUI import *
 if __name__ == "__main__":
     try:
         root = ctk.CTk()
-        root.title("IP Lookup Tool")
-        app = IPApp(root, riskyip=handler)
+        root.title("IR Checklist Tool")
+        app = IrcApp(root, checklist_name="Test")
         root.mainloop()
 
     except ModuleNotFoundError as e:
