@@ -1,20 +1,18 @@
 [
   {
-    "LabelText": "This is a test",
-    "ContentWidget": "Checkbox"
-  },
-  {
-    "LabelText": "This is a test2",
+    "LabelText": "List of affected hosts",
     "ContentWidget": "Entry"
   },
   {
-    "LabelText": "This is a test2",
-    "ContentWidget": "Dropdown",
-    "Selections": ["test1", "test2", "test3"]
+    "LabelText": "All affected hosts isolated?",
+    "ContentWidget": "Checkbox"
   },
   {
-    "LabelText": "This is a test3",
-    "ContentWidget": "Dropdown",
-    "Selections": ["test1", "test2", "test3"]
+    "LabelText": "Stakeholders Notified?",
+    "ContentWidget": "Checkbox"
+  },
+  {
+    "LabelText": "What actions were taken to contain this incident?",
+    "ContentWidget": "Entry"
   }
 ]

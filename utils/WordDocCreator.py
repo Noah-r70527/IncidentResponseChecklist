@@ -1,15 +1,11 @@
-import docx.styles.styles
 from docx import Document
-from docx.shared import Pt
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-
-
 
 class WordDocCreator:
 
-    def __init__(self, document_name: str):
+    def __init__(self, document_name: str, checklist_name: str):
         self.document = Document()
         self.document_name = document_name
+        self.document.add_heading(checklist_name, 0)
 
     def __enter__(self):
         return self
@@ -19,7 +15,6 @@ class WordDocCreator:
 
 
     def write_output(self, document_contents: list[dict[str, str]]) -> None:
-        # Create table with a single header row
         table = self.document.add_table(rows=1, cols=2)
         table.style = "Table Grid"
 

@@ -1,9 +1,11 @@
 from typing import Callable
 import customtkinter as ctk
+from customtkinter import CTkFont
+
 from utils.WordDocCreator import WordDocCreator
 
 def create_label(parent_widget: ctk.CTkFrame, label_text: str) -> ctk.CTkLabel:
-    label = ctk.CTkLabel(parent_widget, text=label_text)
+    label = ctk.CTkLabel(parent_widget, text=label_text, font=("Arial", 15))
     return label
 
 
@@ -18,7 +20,7 @@ def create_checkbox(parent_widget: ctk.CTkFrame, on_value: int = "Done", off_val
 
 
 def create_dropdown(parent_widget: ctk.CTkFrame, selection_list: list[str]) -> ctk.CTkComboBox:
-    combo_box = ctk.CTkComboBox(parent_widget, values=selection_list)
+    combo_box = ctk.CTkComboBox(parent_widget, values=selection_list, state="readonly", font=("Arial", 20))
     return combo_box
 
 
@@ -32,7 +34,8 @@ def create_frame(parent_widget: ctk.CTkFrame) -> ctk.CTkFrame:
     return frame
 
 
-def print_current_results(widget_in):
+
+def print_current_results(widget_in, checklist_type):
     output = []
     widgets = widget_in.winfo_children()
     for widget in widgets:
@@ -68,5 +71,5 @@ def print_current_results(widget_in):
                 case _:
                     print(f'Neither')
 
-    with WordDocCreator("Output.docx") as document:
+    with WordDocCreator("Output.docx", checklist_name=checklist_type) as document:
         document.write_output(output)
