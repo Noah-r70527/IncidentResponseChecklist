@@ -1,5 +1,5 @@
 from docx import Document
-
+from tkinter import messagebox
 class WordDocCreator:
 
     def __init__(self, document_name: str, checklist_name: str):
@@ -11,7 +11,12 @@ class WordDocCreator:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.document.save(self.document_name)
+        try:
+            self.document.save(self.document_name)
+            messagebox.showinfo("Success", f"Successfully saved document to {self.document_name}")
+
+        except PermissionError as e:
+            messagebox.showerror(f"Error occurred", f'{e.filename} could not be saved. {e.strerror}')
 
 
     def write_output(self, document_contents: list[dict[str, str]]) -> None:

@@ -4,6 +4,7 @@ from utils.WordDocCreator import WordDocCreator
 
 def create_label(parent_widget: ctk.CTkFrame, label_text: str) -> ctk.CTkLabel:
     label = ctk.CTkLabel(parent_widget, text=label_text, font=("Arial", 15))
+    label.configure(wraplength=400)
     return label
 
 
@@ -22,8 +23,8 @@ def create_dropdown(parent_widget: ctk.CTkFrame, selection_list: list[str], ctkV
     return combo_box
 
 
-def create_entry(parent_widget: ctk.CTkFrame, ctkVar: ctk.Variable) -> ctk.CTkEntry:
-    entry = ctk.CTkEntry(parent_widget, textvariable=ctkVar)
+def create_entry(parent_widget: ctk.CTkFrame, width: int, height: int) -> ctk.CTkTextbox:
+    entry = ctk.CTkTextbox(parent_widget, width=width, height=height)
     return entry
 
 

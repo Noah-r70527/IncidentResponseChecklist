@@ -4,8 +4,8 @@ if __name__ == "__main__":
     try:
         root = ctk.CTk()
         root.title("IR Checklist Tool")
-        root.geometry("600x600")
-        app = IrcApp(root, checklist_name="Ransomware")
+        root.geometry("800x400")
+        app = IrcApp(root, checklist_name="Ransomware", input_file="test.json")
         root.mainloop()
 
     except ModuleNotFoundError as e:
