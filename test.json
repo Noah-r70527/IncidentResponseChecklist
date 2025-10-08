@@ -1,18 +1,32 @@
 [
   {
-    "LabelText": "List of affected hosts",
-    "ContentWidget": "Entry"
+    "Step": "1",
+    "LabelText": "List all affected systems, devices, and network shares",
+    "ContentWidget": "Entry",
+    "Required": "True"
   },
   {
-    "LabelText": "All affected hosts isolated?",
-    "ContentWidget": "Checkbox"
+    "Step": "2",
+    "LabelText": "Confirm ransomware infection (e.g., encrypted files, ransom note, alerts)",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
   },
   {
-    "LabelText": "Stakeholders Notified?",
-    "ContentWidget": "Checkbox"
+    "Step": "3",
+    "LabelText": "Has the incident been reported to the security team / SOC?",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
   },
   {
-    "LabelText": "What actions were taken to contain this incident?",
-    "ContentWidget": "Entry"
+    "Step": "4",
+    "LabelText": "Isolate affected systems immediately (disconnect from network and Wi-Fi)",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Have backups of critical systems been identified and secured offline?",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
   }
 ]

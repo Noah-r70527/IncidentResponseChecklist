@@ -1,3 +1,4 @@
+import os
 from typing import Callable
 import customtkinter as ctk
 from utils.WordDocCreator import WordDocCreator
@@ -72,3 +73,4 @@ def print_current_results(widget_in, checklist_type):
 
     with WordDocCreator("Output.docx", checklist_name=checklist_type) as document:
         document.write_output(output)
+        os.startfile("Output.docx")

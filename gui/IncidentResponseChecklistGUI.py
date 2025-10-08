@@ -113,8 +113,11 @@ class IrcApp:
                         case _:
                             print(f'Invalid widget type received: {widget}')
 
-        self.finalize_button = ctk.CTkButton(self.checklist_frame, text="Finalize Report", state="disabled",
-                               command=lambda: print_current_results(self.checklist_frame, checklist_name))
+        self.finalize_button = ctk.CTkButton(self.checklist_frame,
+                                             text="Finalize Report",
+                                             state="disabled",
+                                             fg_color="green",
+                                             command=lambda: print_current_results(self.checklist_frame, checklist_name))
         self.finalize_button.pack(side=ctk.BOTTOM, padx=5, pady=5)
         self.enable_report.trace_add("write", self.toggle_finalize_button_state)
 
