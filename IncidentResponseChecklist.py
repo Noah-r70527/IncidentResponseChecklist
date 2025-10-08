@@ -1,4 +1,3 @@
-import customtkinter as ctk
 from gui.IncidentResponseChecklistGUI import *
 
 if __name__ == "__main__":

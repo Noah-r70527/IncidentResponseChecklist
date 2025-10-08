@@ -1,7 +1,5 @@
 from typing import Callable
 import customtkinter as ctk
-from customtkinter import CTkFont
-
 from utils.WordDocCreator import WordDocCreator
 
 def create_label(parent_widget: ctk.CTkFrame, label_text: str) -> ctk.CTkLabel:
@@ -14,18 +12,18 @@ def create_button(parent_widget: ctk.CTkFrame, button_text: str, button_command_
     return button
 
 
-def create_checkbox(parent_widget: ctk.CTkFrame, on_value: int = "Done", off_value: int = "Not Done") -> ctk.CTkCheckBox:
-    check_box = ctk.CTkCheckBox(parent_widget, onvalue=on_value, offvalue=off_value, text="")
+def create_checkbox(parent_widget: ctk.CTkFrame, ctkVar: ctk.Variable, on_value: int = "Done", off_value: int = "Not Done") -> ctk.CTkCheckBox:
+    check_box = ctk.CTkCheckBox(parent_widget, onvalue=on_value, offvalue=off_value, text="", variable=ctkVar)
     return check_box
 
 
-def create_dropdown(parent_widget: ctk.CTkFrame, selection_list: list[str]) -> ctk.CTkComboBox:
-    combo_box = ctk.CTkComboBox(parent_widget, values=selection_list, state="readonly", font=("Arial", 20))
+def create_dropdown(parent_widget: ctk.CTkFrame, selection_list: list[str], ctkVar: ctk.Variable) -> ctk.CTkComboBox:
+    combo_box = ctk.CTkComboBox(parent_widget, values=selection_list, state="readonly", font=("Arial", 20), variable=ctkVar)
     return combo_box
 
 
-def create_entry(parent_widget: ctk.CTkFrame) -> ctk.CTkEntry:
-    entry = ctk.CTkEntry(parent_widget)
+def create_entry(parent_widget: ctk.CTkFrame, ctkVar: ctk.Variable) -> ctk.CTkEntry:
+    entry = ctk.CTkEntry(parent_widget, textvariable=ctkVar)
     return entry
 
 
