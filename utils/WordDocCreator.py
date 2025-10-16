@@ -12,7 +12,7 @@ class WordDocCreator:
 
         heading = self.document.add_heading(f"{checklist_name} Checklist", 0)
         run = heading.runs[0]
-        run.font.color.rgb = RGBColor(0, 128, 0)  # Green
+        run.font.color.rgb = RGBColor(0, 128, 0)
 
     def __enter__(self):
         return self

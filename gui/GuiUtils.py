@@ -61,11 +61,11 @@ def print_current_results(widget_in, checklist_type):
                         }
                     )
 
-                case ctk.CTkEntry:
-                    entry: ctk.CTkEntry = content_label
+                case ctk.CTkTextbox:
+                    entry: ctk.CTkTextbox = content_label
                     output.append(
                         {
-                            label.cget("text"): entry.get()
+                            label.cget("text"): entry.get("1.0", "end-1c")
                         }
                     )
                 case _:
