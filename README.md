@@ -56,6 +56,17 @@ Here’s a simple example for a ransomware response checklist:
 
 You can create additional files in the same format for other scenarios such as phishing, data breaches, or malware infections.
 
+Content Widget Types:
+
+**Checkbox** - _A on/off checkbox. Writes "Done" for step when checked._
+
+**Entry** - _A textbox that you can type a response in_
+
+**Dropdown** - _An option selection widget for picking a response._
+
+
+More options to come!
+
 ---
 
 ## Installation
