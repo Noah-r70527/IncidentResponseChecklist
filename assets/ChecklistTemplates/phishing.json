@@ -1,0 +1,38 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Identify the suspected phishing email or message source",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Do not click on any links or open attachments from the suspicious message",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Report the phishing attempt to the security team or SOC",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Block the sender’s email address and domain in the mail gateway",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Have affected users changed their passwords immediately?",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Was the malicious email deleted from all user inboxes?",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

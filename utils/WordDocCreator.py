@@ -25,6 +25,8 @@ class WordDocCreator:
             messagebox.showerror("Error occurred", f'{e.filename} could not be saved. {e.strerror}')
 
     def write_output(self, document_contents: list[dict[str, str]]) -> None:
+        """Write the content in document_contents to a Word document."""
+
         table = self.document.add_table(rows=1, cols=2)
         table.style = "Table Grid"
 

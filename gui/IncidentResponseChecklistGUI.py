@@ -29,12 +29,17 @@ class IrcApp:
 
 
     def update_var_completion(self, label_text: str):
+        """
+        Handles updating the variable that tracks a steps completion.
+
+        :param label_text:
+        :return:
+        """
         found = False
         for entry in self.ctkVars:
             if label_text in entry:
                 found = True
 
-        print(f'Updating {label_text}')
         if not found:
             self.ctkVars.append(
                 {label_text: "Done"}
@@ -44,12 +49,20 @@ class IrcApp:
             self.enable_report.set(True)
 
     def toggle_finalize_button_state(self, *args):
+        """Used for dynamically enabling the report finilization button once required steps are complete."""
+
         if self.enable_report.get():
             self.finalize_button.configure(state="normal")
         else:
             self.finalize_button.configure(state="disabled")
 
-    def init_gui(self, checklist_name):
+    def init_gui(self, checklist_name: str):
+        """
+        Initializing the GUI based on the input checklist.
+
+        :param checklist_name:
+        :return:
+        """
 
         with open(self.input_file, 'r') as json_file:
             data = json.load(json_file)

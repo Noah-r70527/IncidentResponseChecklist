@@ -34,7 +34,6 @@ def create_frame(parent_widget: ctk.CTkFrame) -> ctk.CTkFrame:
     return frame
 
 
-
 def print_current_results(widget_in, checklist_type):
     output = []
     widgets = widget_in.winfo_children()
@@ -69,7 +68,7 @@ def print_current_results(widget_in, checklist_type):
                         }
                     )
                 case _:
-                    print(f'Neither')
+                    pass
 
     with WordDocCreator("Output.docx", checklist_name=checklist_type) as document:
         document.write_output(output)
