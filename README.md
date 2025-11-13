@@ -9,7 +9,7 @@ It uses simple JSON files to build interactive checklists dynamically and export
 
 - **Dynamic GUI generation** – the interface is automatically built from JSON configuration files.  
 - **Customizable checklists** – create new scenarios (ransomware, phishing, data breach, etc.) by writing a short JSON file.  
-- **Automatic report creation** – exports results into a formatted Word document using `python-docx`.  
+- **Automatic report creation** – exports results into a formatted Word document using `python-docx` or a Csv file.  
 - **Modern, simple interface** – built with `CustomTkinter` for a clean user experience.  
 - **Built-in error handling** – informative pop-ups and graceful exception handling.
 
@@ -101,7 +101,9 @@ More options to come!
 When you export to Word, the tool creates:
 - A heading with the checklist name  
 - A two-column table with **Step Description** and **Step Results**  
-- A confirmation message when the document is saved successfully  
+- A confirmation message when the document is saved successfully
+
+When you export to Csv, the tool creates a csv file with the step description and step results.
 
 ---
 
