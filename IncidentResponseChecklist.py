@@ -2,15 +2,36 @@ from gui.IncidentResponseChecklistGUI import *
 from tkinter import filedialog, messagebox
 from pathlib import Path
 import time
+from configparser import ConfigParser, ParsingError, NoSectionError
 
-TEMPLATE_FILE_PATH = os.path.join(Path(__file__).resolve().parent, r"assets\ChecklistTemplates")
+TEMPLATE_FILE_PATH = os.path.join(Path(__file__).resolve().parent,
+                                  r"assets\ChecklistTemplates"
+                                  if os.name == "nt"
+                                  else "assets/ChecklistTemplates") # Unix based systems don't like the backslash
+
+GEOMETRY = None
+
+# Optionally use config values
+try:
+    CONFIG: ConfigParser = ConfigParser()
+    CONFIG.read("config/config.ini")
+    GEOMETRY = CONFIG.get("general", "windowsize")
+
+except Exception:
+    pass
 
 if __name__ == "__main__":
     try:
         file_path = filedialog.askopenfilename(initialdir=TEMPLATE_FILE_PATH)
         root = ctk.CTk()
         root.title("IR Checklist Tool")
-        root.geometry("800x400") # Initial size of program
+
+        # Initial size of program window
+        if GEOMETRY:
+            root.geometry(GEOMETRY)
+        else:
+            root.geometry("800x400")
+
         name = os.path.basename(file_path).split(".json")[0].capitalize() # Setting the name based on the input json file.
 
         app = IrcApp(root, checklist_name=name, input_file=file_path)
