@@ -1,0 +1,56 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Describe the activity indicating potential lateral movement (remote logins, SMB, RDP, etc.)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify source and destination hosts involved in the suspicious connections",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Verify whether the connections align with normal user or service behavior",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Isolate compromised or suspicious hosts from the network if malicious activity is confirmed",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Collect host logs, EDR telemetry, and network captures for affected systems",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Check for credential dumping tools or abnormal account usage on affected systems",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Reset credentials for accounts used in lateral movement activity",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Harden remote access protocols (RDP, SSH, SMB) and enforce MFA where possible",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Monitor the environment for continued lateral movement attempts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

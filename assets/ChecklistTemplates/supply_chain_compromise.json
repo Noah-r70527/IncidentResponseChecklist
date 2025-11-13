@@ -1,0 +1,56 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Document the third-party product or service suspected of compromise",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify systems and applications that rely on the third-party component",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Review vendor advisories, CVEs, and official guidance for the suspected compromise",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Isolate or disable affected components according to vendor/IR guidance",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Collect logs and telemetry from systems using the compromised component",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Check for signs of post-compromise activity (new accounts, config changes, outbound traffic)",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Apply patches, updates, or alternative solutions as recommended",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Notify internal stakeholders and potentially impacted customers as needed",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Document vendor interactions, remediation steps, and long-term risk changes",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

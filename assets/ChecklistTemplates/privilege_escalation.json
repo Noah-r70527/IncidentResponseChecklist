@@ -1,0 +1,50 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Document the alert or observation that indicated possible privilege escalation",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify the user or service account whose privileges appear to have changed",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Review recent role or group membership changes for the account",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Determine whether the privilege change followed an approved change request",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Review authentication logs for suspicious logins related to the account",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Revoke or adjust the elevated privileges to the minimum required level",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Check for additional accounts with similar unauthorized privilege changes",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Document root cause, affected resources, and corrective actions",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Record details of brute force indicators (failed login spikes, lockouts, source IPs)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify targeted accounts or systems (VPN, web portal, SSH, RDP)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Block or rate-limit offending IPs or networks at firewall/WAF/VPN gateway",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Review authentication logs to confirm no unauthorized logins succeeded",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Force password reset for targeted accounts if compromise is suspected",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Ensure MFA is enforced for remote access and critical systems",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Tune lockout thresholds, CAPTCHA, and throttling to reduce attack impact",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Document attack pattern, defenses applied, and any follow-up actions",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

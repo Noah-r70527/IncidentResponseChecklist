@@ -1,0 +1,56 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Document suspicious email activity (rule changes, forwarding, unusual messages)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify the compromised mailbox and users potentially impacted",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Reset the mailbox password and revoke all active sessions and app passwords",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Review mailbox rules, forwarding settings, and delegates for malicious changes",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Search for fraudulent messages sent from the compromised account",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Notify recipients of fraudulent messages and instruct them not to act on them",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Enable or verify MFA on the affected account and other high-value accounts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Coordinate with finance, legal, and leadership if payment fraud is suspected",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Document the incident, message samples, and remediation steps",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

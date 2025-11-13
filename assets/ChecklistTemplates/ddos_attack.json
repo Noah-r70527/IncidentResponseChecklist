@@ -1,0 +1,62 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Capture details of the attack (traffic volume, protocol, source IPs, time of onset)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Classify type of attack (volumetric, application-layer, state exhaustion)",
+    "ContentWidget": "Entry",
+    "Required": "False"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Engage ISP, upstream provider, or cloud mitigation service",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Activate WAF rules, rate limiting, geo-blocks, or DDoS protection profiles",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Identify whether the attack correlates with extortion or ransomware activity",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Monitor performance of affected services and record metrics",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Determine if any backend services experienced outages or data loss",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Notify leadership, customers, and regulatory bodies as appropriate",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Collect logs and packet captures for post-incident investigation",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "10",
+    "LabelText": "Update firewall rules, mitigation filters, and playbooks based on lessons learned",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

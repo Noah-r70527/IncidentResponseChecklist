@@ -1,0 +1,56 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Record indicators suggesting cloud account compromise (suspicious logins, config changes, new keys)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify the cloud provider and tenant/account impacted (AWS, Azure, GCP, etc.)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Immediately revoke active sessions and reset passwords for compromised identities",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Disable or rotate exposed access keys, API tokens, or service principal credentials",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Review recent cloud activity logs (IAM, audit logs, CloudTrail, etc.) for malicious actions",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Check for new resources provisioned by attacker (VMs, storage, IAM roles, networking)",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Confirm MFA enforcement for admin and high-privilege accounts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Remove unauthorized changes and validate configuration baselines",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Document attack scope, services affected, and configuration changes made",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

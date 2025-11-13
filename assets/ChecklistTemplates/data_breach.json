@@ -1,0 +1,74 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Describe indicators of the suspected data breach (alerts, user reports, abnormal logs)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify affected data types (PII, PHI, credentials, financial data, source code)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Determine initial attack vector (phishing, vulnerable app, credential compromise)",
+    "ContentWidget": "Entry",
+    "Required": "False"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Immediately contain affected systems to prevent further exfiltration",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Preserve forensic evidence (logs, disk images, timestamps, network captures, memory snapshots)",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Identify accounts used in the compromise and reset or revoke access",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Determine scope of data exfiltration, including files, DB tables, or email contents",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Notify internal leadership, legal, compliance, privacy officer, and IR team",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Notify external parties as required (regulators, affected customers, law enforcement)",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "10",
+    "LabelText": "Patch vulnerabilities, rotate keys, and harden systems before restoring normal operations",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "11",
+    "LabelText": "Monitor for follow-up attacker activity or repeated intrusion attempts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "12",
+    "LabelText": "Document full timeline, actions taken, evidence collected, and lessons learned",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

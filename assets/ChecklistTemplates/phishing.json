@@ -1,37 +1,61 @@
 [
   {
     "Step": "1",
-    "LabelText": "Identify the suspected phishing email or message source",
+    "LabelText": "Collect details of the suspected phishing email/message (sender, links, attachments)",
     "ContentWidget": "Entry",
     "Required": "True"
   },
   {
     "Step": "2",
-    "LabelText": "Do not click on any links or open attachments from the suspicious message",
+    "LabelText": "Analyze email headers for spoofing indicators or malicious routing",
     "ContentWidget": "Checkbox",
-    "Required": "True"
+    "Required": "False"
   },
   {
     "Step": "3",
-    "LabelText": "Report the phishing attempt to the security team or SOC",
+    "LabelText": "Do not click links or open attachments from the phishing message",
     "ContentWidget": "Checkbox",
     "Required": "True"
   },
   {
     "Step": "4",
-    "LabelText": "Block the sender’s email address and domain in the mail gateway",
+    "LabelText": "Report phishing attempt to security/SOC team",
     "ContentWidget": "Checkbox",
-    "Required": "False"
+    "Required": "True"
   },
   {
     "Step": "5",
-    "LabelText": "Have affected users changed their passwords immediately?",
+    "LabelText": "Block sender domain, URLs, and file hashes at the email gateway and firewall",
     "ContentWidget": "Checkbox",
     "Required": "True"
   },
   {
     "Step": "6",
-    "LabelText": "Was the malicious email deleted from all user inboxes?",
+    "LabelText": "Identify users who interacted with the email (clicked links, opened attachments)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Force password resets for affected users and review session tokens",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Scan affected devices for malware, credential theft tools, or persistence",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Remove the phishing email from all user mailboxes",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "10",
+    "LabelText": "Document incident impact, users affected, and corrective actions",
     "ContentWidget": "Checkbox",
     "Required": "True"
   }

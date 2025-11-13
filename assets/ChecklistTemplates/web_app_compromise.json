@@ -1,0 +1,56 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Describe the signs of web application compromise (defacement, unexpected responses, alerts)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify affected application components (login, API endpoints, admin panels)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Place application behind maintenance or read-only mode if necessary",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Collect web server logs, WAF logs, and application logs for the affected period",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Identify the likely attack vector (SQLi, XSS, RCE, authentication bypass)",
+    "ContentWidget": "Entry",
+    "Required": "False"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Validate integrity of web application files, containers, and deployed artifacts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Rotate credentials, API keys, and secrets used by the application",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Patch vulnerabilities or misconfigurations exploited in the compromise",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Monitor post-remediation traffic for ongoing exploitation attempts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]

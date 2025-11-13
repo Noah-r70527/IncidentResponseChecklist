@@ -1,0 +1,74 @@
+[
+  {
+    "Step": "1",
+    "LabelText": "Record suspected unauthorized access indicators (alerts, logs, user reports)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "2",
+    "LabelText": "Identify compromised user account or system",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "3",
+    "LabelText": "Immediately revoke credentials or disable impacted accounts",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "4",
+    "LabelText": "Force global logout and reset passwords/API keys linked to the account",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "5",
+    "LabelText": "Confirm MFA enrollment and review authentication logs",
+    "ContentWidget": "Checkbox",
+    "Required": "False"
+  },
+  {
+    "Step": "6",
+    "LabelText": "Analyze logs to determine scope of access (files, emails, systems, data)",
+    "ContentWidget": "Entry",
+    "Required": "True"
+  },
+  {
+    "Step": "7",
+    "LabelText": "Determine method of initial compromise (phishing, credential stuffing, token theft)",
+    "ContentWidget": "Entry",
+    "Required": "False"
+  },
+  {
+    "Step": "8",
+    "LabelText": "Check affected system for malware, rootkits, or unauthorized tools",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "9",
+    "LabelText": "Notify affected users, leadership, compliance, and IR team",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "10",
+    "LabelText": "Implement hardening (MFA enforcement, conditional access, password rotation)",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "11",
+    "LabelText": "Monitor for repeated access attempts or lateral movement",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  },
+  {
+    "Step": "12",
+    "LabelText": "Document root cause, timeline, and corrective actions",
+    "ContentWidget": "Checkbox",
+    "Required": "True"
+  }
+]
