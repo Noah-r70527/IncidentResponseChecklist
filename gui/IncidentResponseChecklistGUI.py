@@ -5,6 +5,8 @@ class IrcApp:
 
     def __init__(self, master, checklist_name, input_file):
 
+        self.finalize_button_csv = None
+        self.finalize_button_word = None
         self.finalize_button = None
         self.input_file = input_file
         self.ctkVars = []
@@ -49,12 +51,16 @@ class IrcApp:
             self.enable_report.set(True)
 
     def toggle_finalize_button_state(self, *args):
-        """Used for dynamically enabling the report finilization button once required steps are complete."""
+        """Used for dynamically enabling the report finalization button once required steps are complete."""
 
         if self.enable_report.get():
-            self.finalize_button.configure(state="normal")
+            self.finalize_button_csv.configure(state="normal")
+            self.finalize_button_word.configure(state="normal")
+
         else:
-            self.finalize_button.configure(state="disabled")
+            self.finalize_button_word.configure(state="disabled")
+            self.finalize_button_csv.configure(state="disabled")
+
 
     def init_gui(self, checklist_name: str):
         """
@@ -126,11 +132,19 @@ class IrcApp:
                         case _:
                             print(f'Invalid widget type received: {widget}')
 
-        self.finalize_button = ctk.CTkButton(self.checklist_frame,
-                                             text="Finalize Report",
+        self.finalize_button_word = ctk.CTkButton(self.checklist_frame,
+                                             text="Finalize Report To Word",
                                              state="disabled",
                                              fg_color="green",
-                                             command=lambda: print_current_results(self.checklist_frame, checklist_name))
-        self.finalize_button.pack(side=ctk.BOTTOM, padx=5, pady=5)
+                                             command=lambda: print_current_results(self.checklist_frame, checklist_name, OutputType.WORD))
+        self.finalize_button_word.pack(side=ctk.BOTTOM, padx=5, pady=5)
+        self.enable_report.trace_add("write", self.toggle_finalize_button_state)
+        
+        self.finalize_button_csv = ctk.CTkButton(self.checklist_frame,
+                                             text="Finalize Report To Csv",
+                                             state="disabled",
+                                             fg_color="green",
+                                             command=lambda: print_current_results(self.checklist_frame, checklist_name, OutputType.CSV))
+        self.finalize_button_csv.pack(side=ctk.BOTTOM, padx=5, pady=5)
         self.enable_report.trace_add("write", self.toggle_finalize_button_state)
 
