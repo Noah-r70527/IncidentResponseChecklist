@@ -32,7 +32,9 @@ if __name__ == "__main__":
         else:
             root.geometry("800x400")
 
-        name = os.path.basename(file_path).split(".json")[0].capitalize() # Setting the name based on the input json file.
+        # Title
+        base = os.path.basename(file_path).replace(".json", "")
+        name = " ".join([w.capitalize() for w in base.split("_")])
 
         app = IrcApp(root, checklist_name=name, input_file=file_path)
         root.mainloop()
